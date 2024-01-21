@@ -1,0 +1,63 @@
+ // TASK-1 NUMBER GUESSING GAME 
+//Create a program that generates a random number and asks the
+user to guess it. Provide feedback on whether the guess is too
+high or too low until the user guesses the correct number. in cpp
+
+//input 
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+using namespace std;
+int main() {
+
+  srand(time(0));
+
+  int secretNumber = rand() % 100 + 1;
+
+  int userGuess;
+  int attempts = 0;
+
+  cout << "Welcome to the Guess the Number Game!\n";
+  cout << "Try to guess the number between 1 and 100.\n\n";
+
+  do {
+
+    cout << "Enter your guess: ";
+    cin >> userGuess;
+
+    attempts++;
+
+    if (userGuess == secretNumber) {
+      cout << "Congratulations! You guessed the correct number in " << attempts
+           << " attempts.\n";
+    } else if (userGuess < secretNumber) {
+      cout << "Too low! Try again.\n";
+    } else {
+      cout << "Too high! Try again.\n";
+    }
+
+  } while (userGuess != secretNumber);
+
+  return 0;
+}
+
+
+//output 
+Welcome to the Guess the Number Game!
+Try to guess the number between 1 and 100.
+
+Enter your guess: 65
+Too low! Try again.
+Enter your guess: 28
+Too low! Try again.
+Enter your guess: 60
+Too low! Try again.
+Enter your guess: 80
+Too low! Try again.
+Enter your guess: 90
+Too high! Try again.
+Enter your guess: 85
+Too high! Try again.
+Enter your guess: 
+81
+Congratulations! You guessed the correct number in 7 attempts.
