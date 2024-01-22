@@ -1,8 +1,10 @@
 
 //task4 to do list 
 // input 
-#include <string>
+
+ #include <string>
 #include <vector>
+#include<iostream>
 using namespace std;
 
 struct Task {
@@ -22,7 +24,7 @@ int main() {
   int choice;
   do {
     displayMenu();
-    cout << "Enter your choice: ";
+    cout<< "Enter your choice: ";
     cin >> choice;
 
     switch (choice) {
@@ -120,6 +122,7 @@ void removeTask(vector<Task> &tasks) {
     }
   }
 }
+
 
 //output 
 ==== TO-DO LIST MANAGER ====
